@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import classnames from "classnames";
 import React from "react";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const NavBar = () => {
   const currentPath = usePathname();
@@ -30,21 +31,25 @@ const NavBar = () => {
           Dominion Behavioral
         </span>
       </Link>
-      <ul className="flex space-x-10">
+      <ul className="flex space-x-5">
         {links.map((link) => (
           <li
             key={link.href}
-            className="px-6 rounded-full p-4 hover:bg-slate-400 transition-colors"
+            className="px-4 rounded-full p-4 group hover:bg-slate-400 transition-colors"
           >
             <Link
               href={link.href}
-              className={classnames({
-                "text-zinc-900": link.href === currentPath,
-                "text-zinc-500": link.href !== currentPath,
-                "hover:text-zinc-800 transition-colors": true,
-              })}
+              className={classnames(
+                {
+                  "text-zinc-900": link.href === currentPath,
+                  "text-zinc-500": link.href !== currentPath,
+                  "hover:text-zinc-800 transition-colors": true,
+                },
+                "flex items-center gap-2",
+              )}
             >
               {link.label}
+              <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
             </Link>
           </li>
         ))}
