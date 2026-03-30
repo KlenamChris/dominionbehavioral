@@ -18,7 +18,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex space-x-6 px-10 mb-5 border-b h-24 items-center justify-between bg-transparent">
+    <nav className="fixed flex space-x-6 px-10 w-full h-24 items-center justify-between backdrop-blur-xs">
       <Link href={"/"} className="flex items-center space-x-3">
         <Image
           alt="logo"
@@ -42,7 +42,7 @@ const NavBar = () => {
               className={classnames(
                 {
                   "text-zinc-900": link.href === currentPath,
-                  "text-zinc-500": link.href !== currentPath,
+                  "text-white": link.href !== currentPath,
                   "hover:text-zinc-800 transition-colors": true,
                 },
                 "flex items-center gap-2",
@@ -54,7 +54,7 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-      <button className="border rounded-full p-3 px-6 text-slate-950 hover:bg-slate-400 transition-colors">
+      <button className="border rounded-full p-3 px-6 text-white hover:bg-slate-400 transition-colors">
         Contact Us
       </button>
     </nav>
