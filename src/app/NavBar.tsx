@@ -18,14 +18,14 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed flex space-x-6 px-10 w-full h-24 items-center justify-between backdrop-blur-xs">
+    <nav className="fixed flex space-x-6 px-10 w-full h-24 items-center justify-between backdrop-blur-sm">
       <Link href={"/"} className="flex items-center space-x-3">
         <Image
           alt="logo"
           width={40}
-          height={40}
+          height={20}
           src={"/dominion-logo.png"}
-          className="hover:scale-110 transition-transform duration-200"
+          className="object-contain hover:scale-110 transition-transform duration-200"
         />
         <span className="font-bold text-2xl text-slate-900">
           Dominion Behavioral
@@ -35,7 +35,7 @@ const NavBar = () => {
         {links.map((link) => (
           <li
             key={link.href}
-            className="px-4 rounded-full p-4 group hover:bg-slate-400 transition-colors"
+            className="px-4 rounded-full p-4 group hover:bg-white/10 transition-colors"
           >
             <Link
               href={link.href}

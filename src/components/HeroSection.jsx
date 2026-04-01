@@ -1,24 +1,28 @@
+import { ArrowDown } from "lucide-react";
 import React from "react";
 
 const HeroSection = () => {
   return (
     <div
       className="w-full h-screen bg-center bg-cover text-white"
-      style={{ backgroundImage: "url(home/3.jpg)" }}
+      style={{
+        backgroundImage: "url(home/3.jpg)",
+      }}
       id="home"
     >
-      <div className="h-screen flex items-center justify-end mr-55 pr-28 pb-52 text-6xl font-bold">
+      <div className="h-screen w-auto flex items-center justify-end mr-55 pr-28 pb-52 text-6xl font-bold">
         <div className="flex">
-        <h2>
-          Your Health 
-        </h2>
-          <hr className="border-t-2 w-18 my-8 mx-2"/>
+          <h2>Your Health</h2>
+          <hr className="border-t-2 w-18 my-8 mx-2" />
         </div>
         <div className="absolute mt-32 mr-8">
-        <h2>
-          Matters to Us 
-        </h2>
+          <h2>Matters to Us</h2>
         </div>
+      </div>
+      <div className="absolute text-white bottom-8 left-0 w-full flex justify-center">
+        <button className="flex items-center animate-bounce px-3 py-3 rounded-full duration-300 hover:bg-white/20 transition-all">
+          <ArrowDown className="w-4 h-4"/>
+        </button>
       </div>
     </div>
   );
