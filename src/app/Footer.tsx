@@ -31,29 +31,32 @@ const Socials = [
 
 const Footer = () => {
   return (
-    <div className="h-auto md:m-4 rounded-t-full md:rounded-3xl bg-slate-400 text-black" id="footer">
-      <div className="md:flex h-72 w-full md:justify-center bg-slate-300 border-b-0 rounded-3xl">
-        <div className="flex-col md:flex-row pt-8 p-4 md:w-full flex items-center md:space-x-2">
-          <p className="text-left">
-            Subscribe to our newsletters, our monthly look at crucial behavioral
-            health issues globally.
+    <div
+      className="h-auto md:px-0 md:m-4 rounded-t-4xl md:rounded-3xl bg-slate-400 text-black"
+      id="footer"
+    >
+      <div className="flex items-end justify-center h-70 bg-white/35 rounded-b-4xl">
+        <div className="flex flex-col items-center space-y-3 p-4 md:flex-row">
+          <p className="text-left ml-3 md:ml-0 md:mr-4">
+            Subscribe to our newsletters, our monthly look at <br /> crucial
+            behavioral health issues globally.
           </p>
-          <div className="flex flex-row mt-4 gap-3">
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email address"
-            className="w-xs border border-white/50 bg-white/50 rounded-full px-4 py-2 focus:outline-none hover:border-0 transition-transform duration-300"
+          <div className="flex">
+            <input
+              type="email"
+              id="email"
+              placeholder="Your email address"
+              className="bg-white/50 p-4 border border-white/50 rounded-full w-80 focus:outline-none hover:border-0 transition-transform duration-300"
             />
-          <button className="py-3 px-3 md:py-3 md:px-8 rounded-full bg-white/45 hover:bg-white/70 transition-all duration-300">
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
-            </div>
+            <button className="bg-slate-900 p-4 px-5 md:px-8 ml-2 text-white rounded-full hover:bg-white/70 hover:text-black transition-all duration-300">
+              <ArrowUpRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
       <div className="pt-8 px-5 md:px-24 h-auto">
-        <div className="flex md:justify-between p-8 ">
-          {/* <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row md:justify-between py-8 ">
+          <div className="flex flex-col">
             <Link href={"/"}>
               <div className="md:flex items-center space-x-2 py-4 pb-8">
                 <Image
@@ -78,11 +81,14 @@ const Footer = () => {
             >
               office@dominionbehavioral
             </Link>
-            <Link href={"tel:(508) 625 7606"} className="hover:text-white/25 transition-colors duration-300">
+            <Link
+              href={"tel:(508) 625 7606"}
+              className="hover:text-white/25 transition-colors duration-300"
+            >
               (508) 625-7606
             </Link>
-          </div> */}
-          {/* <div className="flex flex-col space-y-2">
+          </div>
+          <div className="flex flex-col space-y-2">
             <p className="text-white/20 uppercase py-4">Services</p>
             {Services.map((service) => (
               <Link
@@ -93,8 +99,8 @@ const Footer = () => {
                 {service.name}
               </Link>
             ))}
-          </div> */}
-          {/* <div className="flex flex-col space-y-2">
+          </div>
+          <div className="flex flex-col space-y-2">
             <p className="text-white/20 uppercase py-4">Quick Links</p>
             {Quick_Links.map((link) => (
               <Link
@@ -105,8 +111,10 @@ const Footer = () => {
                 {link.name}
               </Link>
             ))}
-          </div> */}
+          </div>
         </div>
+      </div>
+      <div className="px-4">
         <hr className="mb-8" />
         <div className="grid grid-cols-1 space-y-5 md:flex md:justify-between font-light text-sm uppercase">
           <div className="order-last md:order-first hover:text-white/25 transition-colors duration-300">
@@ -129,7 +137,7 @@ const Footer = () => {
               Privacy
             </Link>
           </div>
-          <div className="order-first md:order-last flex md:flex text-2xl space-x-8 pb-8">
+          <div className="order-first md:order-last flex md:flex text-2xl space-x-4 md:space-x-8 pb-8">
             {Socials.map((social) => (
               <Link
                 key={social.name}
