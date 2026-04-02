@@ -27,7 +27,7 @@ const NavBar = () => {
           src={"/dominion-logo.png"}
           className="object-contain hover:scale-110 transition-transform duration-200 w-8 h-8"
         />
-        <span className="hidden font-bold text-lg md:text-3xl text-slate-900">
+        <span className="hidden md:flex font-bold text-lg md:text-3xl text-slate-900">
           Dominion Behavioral
         </span>
       </Link>
