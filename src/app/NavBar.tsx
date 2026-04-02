@@ -25,13 +25,13 @@ const NavBar = () => {
           width={40}
           height={20}
           src={"/dominion-logo.png"}
-          className="object-contain hover:scale-110 transition-transform duration-200"
+          className="object-contain hover:scale-110 transition-transform duration-200 w-8 h-8"
         />
-        <span className="font-bold text-2xl text-slate-900">
+        <span className="font-bold text-lg md:text-3xl text-slate-900">
           Dominion Behavioral
         </span>
       </Link>
-      <ul className="flex space-x-5">
+      <ul className="md:flex space-x-5 hidden">
         {links.map((link) => (
           <li
             key={link.href}
@@ -54,7 +54,7 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-      <button className="border rounded-full p-3 px-6 text-white hover:bg-slate-400 transition-colors">
+      <button className="hidden md:flex border rounded-full p-3 px-6 text-white hover:bg-slate-400 transition-colors">
         Contact Us
       </button>
     </nav>
